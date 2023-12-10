@@ -1,6 +1,11 @@
 final class Graph {
-    // todo : 2 This is a graph, what is a numCourses in a Graph? What is prerequisites?
-    // numcourses are the courses which has to be taken , prerequisites are courses to take array compulsory
+    /**
+     *
+     * todo : 2 This is a graph, what is a numCourses in a Graph? What is prerequisites?
+     *   numcourses are the courses which has to be taken , prerequisites are courses to take array compulsory
+     * numcourses are the courses that has to be done
+     * prerequisites are the requirements without which a subject cannot be attended
+     */
     private final int numCourses;
     private final int[][] prerequisites;
     private Node[] nodes;
@@ -10,13 +15,6 @@ final class Graph {
         prerequisites = _prerequisites;
         nodes = new Node[numCourses];
     }
-
-   /* public void createNodes() {
-        initialiseNodes();
-        for (int[] n : prerequisites) {
-            nodes[n[0]].nextNodes.add(nodes[n[1]]);
-        }
-    }*/
 
     private void initialiseNodes() {
         for (int i = 0; i < numCourses; i++) {
